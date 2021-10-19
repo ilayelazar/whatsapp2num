@@ -142,7 +142,7 @@
 		phone_num_edited = phone_num.replace('-','');
 		phone_num_edited2 = phone_num_edited.replace('0','');
 		var url = "http://wa.me/+972" + phone_num_edited2 + "/text=" + text;
-		window.open(url, target='_blank');
+		window.open(url);
 		console.log(phone_num);
 		setTimeout(function(){ window.close(); }, 1000);
 		
