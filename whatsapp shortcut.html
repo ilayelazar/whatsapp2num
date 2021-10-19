@@ -137,10 +137,11 @@
 		
 		function myFunction(){
 		console.log(1);
-		var phone_num = document.getElementById("phone").value;
+		var phone_num = document.getElementById("phone").value,
+			 text = document.getElementById("text").value;			
 		phone_num_edited = phone_num.replace('-','');
 		phone_num_edited2 = phone_num_edited.replace('0','');
-		var url = "http://wa.me/+972" + phone_num_edited2;
+		var url = "http://wa.me/+972" + phone_num_edited2 + "/text=" + text;
 		window.open(url, target='_blank');
 		console.log(phone_num);
 		setTimeout(function(){ window.close(); }, 1000);
@@ -155,6 +156,7 @@
         <hr>
         <label id="icon" for="name"><i class="fas fa-phone"></i></label>
         <input type="text" id="phone" placeholder="מספר טלפון" autofocus />
+        <input type="text" id="text" placeholder=" טקסט להודעה "  />
         <hr>
         <div class="btn-block">
           <button onclick='myFunction();'><img src='https://static.whatsapp.net/rsrc.php/v3/yP/r/rYZqPCBaG70.png'></button>
