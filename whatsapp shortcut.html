@@ -152,11 +152,23 @@
       <h1 style="dir:'rtl'">למספר WhatsApp שליחת</h1>
         <hr>
         <label id="icon" for="name"><i class="fas fa-phone"></i></label>
-        <input type="text" id="phone" placeholder="מספר טלפון" autofocus />
+        <input class="submit_on_enter" type="text" id="phone" placeholder="מספר טלפון" autofocus />
         <hr>
         <div class="btn-block">
           <button onclick='myFunction();'><img src='https://static.whatsapp.net/rsrc.php/v3/yP/r/rYZqPCBaG70.png'></button>
         </div>
     </div>
   </body>
+  <script>
+$(document).ready(function() {
+
+  $('.submit_on_enter').keydown(function(event) {
+    // enter has keyCode = 13, change it if you want to use another button
+    if (event.keyCode == 13) {
+      this.form.submit();
+      return false;
+    }
+  });
+});
+</script>
 </html>
